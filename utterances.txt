@@ -18,5 +18,6 @@ WhatsMyColorIntent yes please
 
 
 MyRewardsIntent view my rewards
+MyRewardsForAccountIntent rewards for {Accounts}
 MyAccountsIntent view my accounts
 RedeemRewardsIntent redeem my rewards

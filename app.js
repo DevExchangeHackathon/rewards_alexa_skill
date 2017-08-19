@@ -149,24 +149,50 @@
         // });
         var accountObject = JSON.parse(accountsResponse);
         var size = accountObject.rewardsAccounts.length;
-        speechOutput = "you have " +  accountObject.rewardsAccounts.length + " accounts. ";
+        speechOutput = "you have " + accountObject.rewardsAccounts.length + " accounts. ";
         var index;
-        for(index = 0;index < size; index++) {
-            speechOutput += "Account " + (index + 1) + ". . " + accountObject.rewardsAccounts[index].accountDisplayName.substring(0,(accountObject.rewardsAccounts[index].accountDisplayName.length - 5)) + ". . ";
+        for (index = 0; index < size; index++) {
+            speechOutput += "Account " + (index + 1) + ". . " + accountObject.rewardsAccounts[index].accountDisplayName.substring(0, (accountObject.rewardsAccounts[index].accountDisplayName.length - 5)) + ". . ";
             accounts.push(accountObject.rewardsAccounts[index]);
         }
         speechOutput += ". . say view my rewards to see rewards details. . ";
         callback(sessionAttributes,
-                buildSpeechletResponse(intent.name, speechOutput, repromptText, shouldEndSession));
+            buildSpeechletResponse(intent.name, speechOutput, repromptText, shouldEndSession));
     }
 
     function getRewards(intent, session, callback) {
         let speechOutput = "You have rewards for " + accounts.length + " accounts. . ";
         if (accounts.length > 0) {
-            speechOutput += "which account would you like details for? You can say card 1 or card 2?";
+            speechOutput += "which account would you like details for? You can say view rewards for card by number";
         }
+        const accountSlot = intent.slots.Accounts;
         let shouldEndSession = false;
         const repromptText = null;
+        callback(sessionAttributes,
+            buildSpeechletResponse(intent.name, speechOutput, repromptText, shouldEndSession));
+    }
+    
+    function getRewardsForAccount(intent, session, callback) {
+        const accountSlot = intent.slots.Accounts;
+        let shouldEndSession = false;
+        const repromptText = null;
+
+        // let speechOutput = "You have rewards for " + accounts.length + " accounts. . ";
+        // if (accounts.length > 0) {
+            // speechOutput += "which account would you like details for? You can say view rewards for card by number";
+        // }
+        if (accountSlot) {
+            const account = accountSlot.value;
+            // sessionAttributes = createFavoriteColorAttributes(favoriteColor);
+            speechOutput = "Details for account " + account + ". . ";
+                //"your favorite color by saying, what's my favorite color?";
+            //repromptText = "You can ask me your favorite color by saying, what's my favorite color?";
+        } else {
+            speechOutput = "Acount Index invalid. ";
+            repromptText = "I'm not sure what your favorite color is. You can tell me your " +
+                'favorite color by saying, my favorite color is red';
+        }
+
         callback(sessionAttributes,
             buildSpeechletResponse(intent.name, speechOutput, repromptText, shouldEndSession));
     }
@@ -214,6 +240,8 @@
             getAccounts(intent, session, callback);
         } else if (intentName === 'RedeemRewardsIntent') {
             redeemRewards(intent, session, callback);
+        } else if (intentName === 'MyRewardsForAccountIntent') {
+            getRewardsForAccount(intent, session, callback);
         } else if (intentName === 'AMAZON.HelpIntent') {
             getWelcomeResponse(callback);
         } else if (intentName === 'AMAZON.StopIntent' || intentName === 'AMAZON.CancelIntent') {

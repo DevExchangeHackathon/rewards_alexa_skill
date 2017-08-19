@@ -21,13 +21,16 @@
 {
     "intents": [
       {
-        "intent": "MyRewardsIntent",
+        "intent": "MyRewardsForAccountIntent",
         "slots": [
             {
-              "name": "Account",
+              "name": "Accounts",
               "type": "LIST_OF_ACCOUNTS"
             }
           ],
+      },
+      {
+        "intent": "MyRewardsIntent"
       },
       {
         "intent": "MyAccountsIntent"
