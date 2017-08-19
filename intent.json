@@ -1,0 +1,42 @@
+{
+  "intents": [
+    {
+      "slots": [
+        {
+          "name": "Color",
+          "type": "LIST_OF_COLORS"
+        }
+      ],
+      "intent": "MyColorIsIntent"
+    },
+    {
+      "intent": "WhatsMyColorIntent"
+    },
+    {
+      "intent": "AMAZON.HelpIntent"
+    }
+  ]
+}
+
+{
+    "intents": [
+      {
+        "intent": "MyRewardsIntent",
+        "slots": [
+            {
+              "name": "Account",
+              "type": "LIST_OF_ACCOUNTS"
+            }
+          ],
+      },
+      {
+        "intent": "MyAccountsIntent"
+      },
+      {
+        "intent": "RedeemRewardsIntent"
+      },
+      {
+        "intent": "AMAZON.HelpIntent"
+      }
+    ]
+}
