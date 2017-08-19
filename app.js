@@ -46,6 +46,224 @@
         ] \
     }";
 
+    const account1RewardsResponse = "{ \
+        \"accountDisplayName\": \"Capital One Visaplatinum Miles *3582\", \
+        \"rewardsBalance\": 100000, \
+        \"rewardsCurrency\": \"Miles\", \
+        \"rewardsCurrencyDescription\": \"Miles\", \
+        \"balanceTimestamp\": \"2016-05-02T22:26:57Z\", \
+        \"canRedeem\": true, \
+        \"canTransferOut\": true, \
+        \"canTransferIn\": true, \
+        \"redemptionOpportunities\": [ \
+            { \
+                \"category\": \"Travel\", \
+                \"categoryDescription\": \"Travel\", \
+                \"subCategory\": \"Travel.Erase\", \
+                \"subcategoryDescription\": \"Travel Reimbursement\", \
+                \"displaySequenceNumber\": 1.1, \
+                \"tierMinCashValue\": 0.01, \
+                \"tierMaxCashValue\": 150, \
+                \"minRedemptionAmount\": 15000, \
+                \"redemptionAmount\": 15000, \
+                \"cashValue\": 150, \
+                \"cashDisplayValue\": \"$150.00\" \
+            }, \
+            { \
+                \"category\": \"Travel\", \
+                \"categoryDescription\": \"Travel\", \
+                \"subCategory\": \"Travel.Erase\", \
+                \"subcategoryDescription\": \"Travel Reimbursement\", \
+                \"displaySequenceNumber\": 1.11, \
+                \"tierMinCashValue\": 150.01, \
+                \"tierMaxCashValue\": 350, \
+                \"minRedemptionAmount\": 35000, \
+                \"redemptionAmount\": 35000, \
+                \"cashValue\": 350, \
+                \"cashDisplayValue\": \"$350.00\" \
+            }, \
+            { \
+                \"category\": \"Travel\", \
+                \"categoryDescription\": \"Travel\", \
+                \"subCategory\": \"Travel.Erase\", \
+                \"subcategoryDescription\": \"Travel Reimbursement\", \
+                \"displaySequenceNumber\": 1.12, \
+                \"tierMinCashValue\": 350.01, \
+                \"tierMaxCashValue\": 600, \
+                \"minRedemptionAmount\": 60000, \
+                \"redemptionAmount\": 60000, \
+                \"cashValue\": 600, \
+                \"cashDisplayValue\": \"$600.00\" \
+            }, \
+            { \
+                \"category\": \"Travel\", \
+                \"categoryDescription\": \"Travel\", \
+                \"subCategory\": \"Travel.Erase\", \
+                \"subcategoryDescription\": \"Travel Reimbursement\", \
+                \"displaySequenceNumber\": 1.13, \
+                \"tierMinCashValue\": 600.01, \
+                \"minRedemptionAmount\": 60001, \
+                \"redemptionAmount\": 100000, \
+                \"redemptionRate\": 0.01, \
+                \"cashValue\": 1000, \
+                \"cashDisplayValue\": \"$1,000.00\" \
+            }, \
+            { \
+                \"category\": \"Travel\", \
+                \"categoryDescription\": \"Travel\", \
+                \"subCategory\": \"Travel.Booking\", \
+                \"subcategoryDescription\": \"New Travel Purchases\", \
+                \"displaySequenceNumber\": 1.2, \
+                \"tierMinCashValue\": 0.01, \
+                \"tierMaxCashValue\": 150, \
+                \"minRedemptionAmount\": 15000, \
+                \"redemptionAmount\": 15000, \
+                \"cashValue\": 150, \
+                \"cashDisplayValue\": \"$150.00\" \
+            }, \
+            { \
+                \"category\": \"Travel\", \
+                \"categoryDescription\": \"Travel\", \
+                \"subCategory\": \"Travel.Booking\", \
+                \"subcategoryDescription\": \"New Travel Purchases\", \
+                \"displaySequenceNumber\": 1.21, \
+                \"tierMinCashValue\": 150.01, \
+                \"tierMaxCashValue\": 350, \
+                \"minRedemptionAmount\": 35000, \
+                \"redemptionAmount\": 35000, \
+                \"cashValue\": 350, \
+                \"cashDisplayValue\": \"$350.00\" \
+            }, \
+            { \
+                \"category\": \"Travel\", \
+                \"categoryDescription\": \"Travel\", \
+                \"subCategory\": \"Travel.Booking\", \
+                \"subcategoryDescription\": \"New Travel Purchases\", \
+                \"displaySequenceNumber\": 1.22, \
+                \"tierMinCashValue\": 350.01, \
+                \"tierMaxCashValue\": 600, \
+                \"minRedemptionAmount\": 60000, \
+                \"redemptionAmount\": 60000, \
+                \"cashValue\": 600, \
+                \"cashDisplayValue\": \"$600.00\" \
+            }, \
+            { \
+                \"category\": \"Travel\", \
+                \"categoryDescription\": \"Travel\", \
+                \"subCategory\": \"Travel.Booking\", \
+                \"subcategoryDescription\": \"New Travel Purchases\", \
+                \"displaySequenceNumber\": 1.23, \
+                \"tierMinCashValue\": 600.01, \
+                \"minRedemptionAmount\": 60001, \
+                \"redemptionAmount\": 100000, \
+                \"redemptionRate\": 0.01, \
+                \"cashValue\": 1000, \
+                \"cashDisplayValue\": \"$1,000.00\" \
+            }, \
+            { \
+                \"category\": \"Cash\", \
+                \"categoryDescription\": \"Cash and Credit\", \
+                \"subCategory\": \"Cash.Check\", \
+                \"subcategoryDescription\": \"Check\", \
+                \"displaySequenceNumber\": 2.1, \
+                \"minRedemptionAmount\": 5000, \
+                \"redemptionAmount\": 100000, \
+                \"redemptionRate\": 0.005, \
+                \"cashValue\": 500, \
+                \"cashDisplayValue\": \"$500.00\" \
+            }, \
+            { \
+                \"category\": \"Cash\", \
+                \"categoryDescription\": \"Cash and Credit\", \
+                \"subCategory\": \"Cash.Credit\", \
+                \"subcategoryDescription\": \"Account Credit\", \
+                \"displaySequenceNumber\": 2.2, \
+                \"minRedemptionAmount\": 5000, \
+                \"redemptionAmount\": 100000, \
+                \"redemptionRate\": 0.005, \
+                \"cashValue\": 500, \
+                \"cashDisplayValue\": \"$500.00\" \
+            }, \
+            { \
+                \"category\": \"Cash\", \
+                \"categoryDescription\": \"Cash and Credit\", \
+                \"subCategory\": \"Cash.Purchase\", \
+                \"subcategoryDescription\": \"New Non-Travel Purchases\", \
+                \"displaySequenceNumber\": 2.3, \
+                \"minRedemptionAmount\": 5000, \
+                \"redemptionAmount\": 100000, \
+                \"redemptionRate\": 0.005, \
+                \"cashValue\": 500, \
+                \"cashDisplayValue\": \"$500.00\" \
+            }, \
+            { \
+                \"category\": \"GiftCard\", \
+                \"categoryDescription\": \"Gift Cards\", \
+                \"subCategory\": \"GiftCard.Mail\", \
+                \"subcategoryDescription\": \"Gift Cards\", \
+                \"displaySequenceNumber\": 3.1, \
+                \"tierMinCashValue\": 0.01, \
+                \"tierMaxCashValue\": 49.99, \
+                \"minRedemptionAmount\": 2, \
+                \"redemptionAmount\": 100000, \
+                \"redemptionRate\": 0.005, \
+                \"cashValue\": 500, \
+                \"cashDisplayValue\": \"$500.00\" \
+            }, \
+            { \
+                \"category\": \"GiftCard\", \
+                \"categoryDescription\": \"Gift Cards\", \
+                \"subCategory\": \"GiftCard.Mail\", \
+                \"subcategoryDescription\": \"Gift Cards\", \
+                \"displaySequenceNumber\": 3.11, \
+                \"tierMinCashValue\": 50, \
+                \"tierMaxCashValue\": 199.99, \
+                \"minRedemptionAmount\": 7692, \
+                \"redemptionAmount\": 100000, \
+                \"redemptionRate\": 0.0065, \
+                \"cashValue\": 650, \
+                \"cashDisplayValue\": \"$650.00\" \
+            }, \
+            { \
+                \"category\": \"GiftCard\", \
+                \"categoryDescription\": \"Gift Cards\", \
+                \"subCategory\": \"GiftCard.Mail\", \
+                \"subcategoryDescription\": \"Gift Cards\", \
+                \"displaySequenceNumber\": 3.12, \
+                \"tierMinCashValue\": 200, \
+                \"minRedemptionAmount\": 20000, \
+                \"redemptionAmount\": 100000, \
+                \"redemptionRate\": 0.01, \
+                \"cashValue\": 1000, \
+                \"cashDisplayValue\": \"$1,000.00\" \
+            }, \
+            { \
+                \"category\": \"Charity\", \
+                \"categoryDescription\": \"Charitable Donation\", \
+                \"subCategory\": \"Charity.Donate\", \
+                \"subcategoryDescription\": \"Donation\", \
+                \"displaySequenceNumber\": 4.1, \
+                \"minRedemptionAmount\": 1000, \
+                \"redemptionAmount\": 100000, \
+                \"redemptionRate\": 0.01, \
+                \"cashValue\": 1000, \
+                \"cashDisplayValue\": \"$1,000.00 \" \
+            } \
+        ], \
+        \"productAccountType\": \"Credit Card\", \
+        \"creditCardAccount\": { \
+            \"issuer\": \"Capital One\", \
+            \"product\": \"Visaplatinum\", \
+            \"lastFour\": \"3582\", \
+            \"network\": \"Visa\", \
+            \"isBusinessAccount\": false \
+        }, \
+        \"primaryAccountHolder\": { \
+            \"firstName\": \"TATYANA\", \
+            \"lastName\": \"SCHMIDT\" \
+        } \
+    } \"";
+
     /**
      * This sample demonstrates a simple skill built with the Amazon Alexa Skills Kit.
      * The Intent Schema, Custom Slots, and Sample Utterances for this skill, as well as
@@ -175,22 +393,23 @@
     function getRewardsForAccount(intent, session, callback) {
         const accountSlot = intent.slots.Accounts;
         let shouldEndSession = false;
+        //const repromptText = null;
+        let speechOutput = '';
         const repromptText = null;
-
-        // let speechOutput = "You have rewards for " + accounts.length + " accounts. . ";
-        // if (accounts.length > 0) {
-            // speechOutput += "which account would you like details for? You can say view rewards for card by number";
-        // }
         if (accountSlot) {
-            const account = accountSlot.value;
+            const account_index = accountSlot.value;
+            var reward_ref = accounts[account_index].rewardsAccountReferenceId
             // sessionAttributes = createFavoriteColorAttributes(favoriteColor);
-            speechOutput = "Details for account " + account + ". . ";
+            speechOutput = "Details for account " + account_index + ". . ";
+            //get account info from api reward_ref.rewardsAccountReferenceId
+            var reward = JSON.parse(account1RewardsResponse);
+            speechOutput = "You have " + reward.rewardsBalance + " " + reward.rewardsCurrency;
                 //"your favorite color by saying, what's my favorite color?";
             //repromptText = "You can ask me your favorite color by saying, what's my favorite color?";
         } else {
             speechOutput = "Acount Index invalid. ";
-            repromptText = "I'm not sure what your favorite color is. You can tell me your " +
-                'favorite color by saying, my favorite color is red';
+           // repromptText = "I'm not sure what your favorite color is. You can tell me your " +
+              //  'favorite color by saying, my favorite color is red';
         }
 
         callback(sessionAttributes,
